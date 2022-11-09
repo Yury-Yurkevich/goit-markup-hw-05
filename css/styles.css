@@ -1,5 +1,7 @@
 /*змінні кольорів*/
-:root { /* color */
+:root {
+     /* color */
+
     --button-color-blue: #2196F3;
     --background-color-white: #ffffff;
     --background-color-dark: #2F303A;
@@ -10,9 +12,13 @@
     --logo-text-color-blue: #2196F3;
     --logo-text-color-black: #212121;
     --hover-focus-color-blue: #2196F3;
-
     /* font */
     --primary-font: 'Roboto', sans-serif;
+    /* animation */
+    --trns-fast: 250ms;
+    --trns-slow: 2500ms;
+
+
 }
 h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
@@ -104,6 +110,10 @@ nav a {
     line-height: 1.14;
     letter-spacing: 0.02em;
     position: relative;
+
+    transition-property: color;
+    transition-duration: var(--trns-fast);
+
 }
 .current {
     color: #2196F3;
@@ -119,40 +129,32 @@ nav a {
     height: 4px;
 
     border-radius: 4px;
-    background-color:var(--button-color-blue)
+    background-color:var(--button-color-blue);
+    
 }
 
 .nav-contact-menu {
     display: flex;
-}
-/*    Hover Focus  header  */
-.menu-link:hover,
-.menu-link:focus,
-.mail-link:hover,
-.mail-link:focus,
-.phone-number-link:hover,
-.phone-number-link:focus {
-    color: var(--hover-focus-color-blue);
-}
-.mail-item:hover,
-.phone-item:hover .icons-header {
-    fill: var(--hover-focus-color-blue);
 }
 
 /*    Посилання на mail     */
 .mail-item {
     margin-right: 50px;
     display: flex;
-    align-items: center;
+    align-items: center; 
+
+
 }
-
-
 .phone-item {
     display: flex;
     align-items: center;
+
 }
 .icons-header {
     margin-right: 10px;
+
+    transition-property: fill;
+    transition-duration: var(--trns-fast);
 }
 
 
@@ -161,6 +163,9 @@ nav a {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--main-text-color-gray);
+
+    transition-property: color;
+    transition-duration: var(--trns-fast);
 }                   
 /*    Посилання на phone    */
 .phone-number-link {
@@ -168,6 +173,28 @@ nav a {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color:var(--main-text-color-gray);
+    
+    transition-property: color;
+    transition-duration: var(--trns-fast);
+
+    
+}
+
+/*    Hover Focus  header  */
+
+.menu-link:hover,
+.menu-link:focus,
+.mail-link:hover,
+.mail-link:focus,
+.phone-number-link:hover,
+.phone-number-link:focus {
+    color: var(--hover-focus-color-blue);
+}
+
+.mail-item:hover,
+.phone-item:hover .icons-header {
+    fill: var(--hover-focus-color-blue);
+
 }
 
 /*    MAIN section--HERO SECTION    */
@@ -209,6 +236,9 @@ img {
     margin-left: auto;
     margin-right: auto;
     border: none;
+
+    transition-property: background-color;
+    transition-duration: var(--trns-fast);
 
 }
 .modal-button:hover, 
@@ -266,7 +296,11 @@ img {
     margin-top: 10px;
 }
 
-/*    Main section--Чим ми займаємося    */
+/*   Чим ми займаємося    */
+.we-do-section {
+    padding-top: 0;
+}
+
 .title-image-work {
     display: flex;
     justify-content: center;
@@ -282,9 +316,7 @@ img {
     gap: 30px;
 
 }
-.we-do-section {
-    padding-top: 0;
-}
+
 /* overlay */
 
 .wrapper {
@@ -375,9 +407,15 @@ img {
     color: #AFB1B8;
     background-color: #FFFFFF;
     border-radius: 50%;
+    
+    transition-property: background-color fill;
+    transition-duration: var(--trns-fast);
 }
 .social-icons {
-   fill: currentColor;
+    fill: currentColor;
+
+    transition-property: background-color fill;
+    transition-duration: var(--trns-fast);
 }
 /* hover/focus */
 .social-link:hover,
@@ -414,6 +452,9 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     color: #AFB1B8;
+
+    transition-property: color;
+    transition-duration: var(--trns-fast);
 }
 .client-icon {
     fill: currentColor;
@@ -445,6 +486,9 @@ img {
     padding-left: 22px;
     padding-right: 22px;
 
+    transition-property: background-color color box-shadow;
+    transition-duration:var(--trns-fast);
+
 }
 .text-trasform-none {
     text-transform: lowercase;
@@ -461,6 +505,9 @@ img {
     line-height: 26px;
     text-align: center;
     color: var(--main-text-color-black);
+
+    transition-property: color;
+    transition-duration: var(--trns-slow);
 }
 .nav-list-link:hover,
 .nav-list-link:focus {
@@ -483,15 +530,24 @@ img {
 } 
 
 .item {
-    width: 370px;
-    box-sizing: border-box;
-    background: var(--background-color-white);
+    display: inline-block;
+
 }
-.item:hover,
-.item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-link {
+    display: block;
+    
+    transition-property: box-shadow;
+    transition-duration: var(--trns-fast);
+    
 }
-.head-list {
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-title {
     text-transform: capitalize;
     font-size: 18px;
     line-height: 36px;
@@ -511,6 +567,46 @@ img {
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+}
+
+/* Overlay portfolio */
+
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.overlay-box-portfolio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 294px;
+    background: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-deskription {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.portfolio-link:hover .overlay-box-portfolio {
+    transform: translateY(0);
+}
+.portfolio-link:focus .overlay-box-portfolio {
+    transform: translateY(0);
 }
 
 /*    Footer    */
@@ -549,10 +645,12 @@ img {
     flex-direction: column;
 }
 
-
 .address-link {
     line-height: 1.7;
     color: #FFFFFF;
+
+    transition-property: color;
+    transition-duration: var(--trns-fast);
 }
 .footer-mail-item {
     margin-top: 9px;
@@ -563,14 +661,19 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--main-text-color-gray);
+
+    transition-property: color;
+    transition-duration: var(--trns-fast);
 }
 
 .footer-phone-link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    ;
     color: var(--main-text-color-gray);
+
+    transition-property: color;
+    transition-duration: var(--trns-fast);
 }
 .footer-phone-item {
     margin-top: 9px;
@@ -623,10 +726,14 @@ color: #FFFFFF;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    
+    transition-property: background-color;
+    transition-duration: var(--trns-fast);
 }
 
 .social-icons-footer {
     fill: currentColor;
+    
 }
 
 /* hover/focus */
@@ -649,11 +756,8 @@ color: #FFFFFF;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2); 
 
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-
     transition: opacity 250ms linear, visibility 250ms linear;
+    
 
 }
 .backdrop.is-hidden {
@@ -691,7 +795,4 @@ color: #FFFFFF;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.close-btn-icon {
-
 }
