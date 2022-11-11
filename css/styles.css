@@ -175,9 +175,7 @@ nav a {
     color:var(--main-text-color-gray);
     
     transition-property: color;
-    transition-duration: var(--trns-fast);
-
-    
+    transition-duration: var(--trns-fast); 
 }
 
 /*    Hover Focus  header  */
@@ -322,25 +320,20 @@ img {
 .wrapper {
     position: relative;
 }
- .overlay-box {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
-    
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
- }
+
 .overlay-text {
     font-weight: 700;
     text-transform: uppercase;
     color: #FFFFFF;
-    text-align: center;
     letter-spacing: 0.03em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Наша команда */
 .team-section {
@@ -453,7 +446,7 @@ img {
     border-radius: 4px;
     color: #AFB1B8;
 
-    transition-property: color;
+    transition-property: color border-color;
     transition-duration: var(--trns-fast);
 }
 .client-icon {
@@ -531,15 +524,17 @@ img {
 
 .item {
     display: inline-block;
-
 }
+
+
 .portfolio-link {
     display: block;
     
-    transition-property: box-shadow;
+    transform: box-shadow;
     transition-duration: var(--trns-fast);
     
 }
+
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
@@ -574,6 +569,7 @@ img {
 .portfolio-thumb {
     position: relative;
     overflow: hidden;
+
 }
 .portfolio-overlay {
     position: absolute;
@@ -590,9 +586,9 @@ img {
     height: 294px;
     background: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
-
+    
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--trns-fast) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-deskription {
@@ -608,7 +604,6 @@ img {
 .portfolio-link:focus .overlay-box-portfolio {
     transform: translateY(0);
 }
-
 /*    Footer    */
 .page-footer {
     display: block;
