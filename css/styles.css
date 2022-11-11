@@ -201,6 +201,7 @@ img {
 }
 .hero-section {
     padding: 200px 0 200px 0;
+    margin: auto;
     max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.4)), url('../images/Img.jpg');
     background-color: var(--background-color-dark);
@@ -480,7 +481,7 @@ img {
     padding-right: 22px;
 
     transition-property: background-color color box-shadow;
-    transition-duration:var(--trns-fast);
+    transition-duration: var(--trns-fast);
 
 }
 .text-trasform-none {
@@ -489,19 +490,7 @@ img {
 .text-transform-up {
     text-transform: uppercase;
 }
-.item-link {
-    text-transform: capitalize;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: var(--main-text-color-black);
 
-    transition-property: color;
-    transition-duration: var(--trns-slow);
-}
 .nav-list-link:hover,
 .nav-list-link:focus {
     background-color: var(--hover-focus-color-blue);
@@ -532,14 +521,6 @@ img {
     
     transform: box-shadow;
     transition-duration: var(--trns-fast);
-    
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-title {
@@ -588,7 +569,7 @@ img {
     padding: 63px 24px;
     
     transform: translateY(100%);
-    transition: transform var(--trns-fast) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--trns-fast) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-deskription {
@@ -598,12 +579,17 @@ img {
     color: #FFFFFF;
 }
 
-.portfolio-link:hover .overlay-box-portfolio {
-    transform: translateY(0);
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.portfolio-link:hover .overlay-box-portfolio,
 .portfolio-link:focus .overlay-box-portfolio {
     transform: translateY(0);
 }
+
 /*    Footer    */
 .page-footer {
     display: block;
